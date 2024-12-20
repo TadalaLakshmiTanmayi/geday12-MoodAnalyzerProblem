@@ -10,16 +10,16 @@ class MoodAnalyzerProblemTest {
     // Test case for TC1.1: Given "I am in Sad Mood" message, should return "SAD"
     @Test
     public void testAnalyseMood_Sad() {
-        String message = "I am in Sad Mood";
-        String result = moodAnalyser.analyseMood(message);
+        MoodAnalyzerProblem moodAnalyser = new MoodAnalyzerProblem("I am in Sad Mood");
+        String result = moodAnalyser.analyseMood();
         assertEquals("SAD", result);
     }
 
-    // Test case for TC1.2: Given "I am in Any Mood" message, should return "HAPPY"
+    // Test case for TC1.2: Given "I am in Happy Mood" message, should return "HAPPY"
     @Test
     public void testAnalyseMood_Happy() {
-        String message = "I am in Any Mood";
-        String result = moodAnalyser.analyseMood(message);
+        MoodAnalyzerProblem moodAnalyser = new MoodAnalyzerProblem("I am in Happy Mood");
+        String result = moodAnalyser.analyseMood();
         assertEquals("HAPPY", result);
     }
 

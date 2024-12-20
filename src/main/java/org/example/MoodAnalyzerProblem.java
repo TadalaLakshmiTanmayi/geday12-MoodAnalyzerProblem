@@ -3,7 +3,14 @@ package org.example;
 import java.util.Scanner;
 
 public class MoodAnalyzerProblem {
-    public static String analyseMood(String message) {
+    private String message;
+    public MoodAnalyzerProblem() {
+        this.message = "";
+    }
+    public MoodAnalyzerProblem(String message) {
+        this.message = message;
+    }
+    public String analyseMood() {
         if (message.toLowerCase().contains("sad")) {
             return "SAD";
         } else {
@@ -15,8 +22,8 @@ public class MoodAnalyzerProblem {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please enter a message to analyze your mood:");
         String message = sc.nextLine();
-        MoodAnalyzerProblem moodAnalyser = new MoodAnalyzerProblem();
-        System.out.println("Mood: " + moodAnalyser.analyseMood(message));
+        MoodAnalyzerProblem moodAnalyser = new MoodAnalyzerProblem(message);
+        System.out.println("Mood: " + moodAnalyser.analyseMood());
 
         sc.close();
     }
